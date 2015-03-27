@@ -1,0 +1,13 @@
+notifiers :
+    - name: PushOver
+      exec: pushover
+      title: '-t "{}"'
+      message: '-m "{}"'
+      priority: '-p {}'
+      args: '-q'
+
+    - name: Blink1
+      exec: ~/.local/bin/blink1-tool
+      onerror: '--red'
+      onsuccess: '--green'
+      args: '--blink=1'
